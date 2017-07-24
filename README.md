@@ -31,6 +31,15 @@ Adjust target temperature, cooking time as well as PID coefficients and run.
 
 To be updated
 
+Enable DS18B20 temperature sensor by loading 1 wire module
+
+```
+sudo echo w1-gpio >> /etc/modules
+sudo echo w1-therm >> /etc/modules
+sudo echo 'dtoverlay=w1-gpio-pullup,gpiopin=20' >> /boot/config.txt
+sudo reboot
+```
+
 ## Software requirement
 
 You would fist need to setup:
